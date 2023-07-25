@@ -8,11 +8,11 @@
 </head>
 <body>
     <div class="grid-container main">
-        <div id="header">
+        <div id="header" class="flex-container">
             <div id="header-top" class="flex-container">
                 <div id="search" class="flex-container">
                     <img id="search-icon" src="./icons/search-icon.png" alt="Search">
-                    <input type="text" placeholder="Search">
+                    <input id="search-bar" type="text" placeholder="Search">
                 </div>
                 <div id="notif-settings"  class="flex-container">
                     <img id= "bell-icon" src="./icons/bell.png" alt="Notifications">
@@ -24,9 +24,9 @@
                 <div id="greetings" class="grid-container">
                     <img id="picture-big" src="./icons/616563.png" alt="Your picture">
                     <span id="greet-hi">Hi there,</span>
-                    <div id="greet-details">
-                        <span id="name-big">Skiym Myiks</span>
-                        <span id="tag">@skiym</span>
+                    <div id="greet-details" class="flex-container">
+                        <h2 id="name-big">Skiym Myiks</h2>
+                        <h2 id="tag">(@skiym)</h2>
                     </div>
                     
                 </div>
@@ -39,65 +39,98 @@
 
                 
         </div>
-        <div id="sidebar">
-            <div id="dashboard-logo">Dashboard</div>
-            <div id="home">Home</div>
-            <div id="profile">Profile</div>
-            <div id="messages">Messages</div>
-            <div id="history">Histoyr</div>
-            <div id="tasks">Tasks</div>
-            <div id="communities">Communities</div>
-            <div id="settings">Settings</div>
-            <div id="support">Support</div>
-            <div id="privacy">Privacy</div>
+        <div id="sidebar" class="grid-container">
+            <div id="dashboard-logo" class="flex-container">
+                <img src="icons/menu.png" alt="Dashboard Icon" id="dashboard-icon">
+                <span>DASHBOARD</span>
+            </div>
+            <nav>
+                <ul id="home"><img class="nav-icon" src="icons/home.png" alt="Home"> Home</ul>
+                <ul id="profile"><img class="nav-icon" src="icons/user.png" alt="profile">Profile</ul>
+                <ul id="messages"><img class="nav-icon" src="icons/messages.png" alt="messages">Messages</ul>
+                <ul id="history"><img class="nav-icon" src="icons/history.png" alt="history">History</ul>
+                <ul id="tasks"><img class="nav-icon" src="icons/tasks.png" alt="tasks">Tasks</ul>
+                <ul id="communities"><img class="nav-icon" src="icons/communities.png" alt="communities">Communities</ul>
+            </nav>
+            <nav id="higher-settings">
+                <ul id="settings"><img class="nav-icon" src="icons/settings.png" alt="settings">Settings</ul>
+                <ul id="support"><img class="nav-icon" src="icons/support2.png" alt="support">Support</ul>
+                <ul id="privacy"><img class="nav-icon" src="icons/privacy.png" alt="privacy">Privacy</ul>  
+            </nav>
         </div>
-        <div id="content">
+        <div id="content" class="grid-container">
             <div id="projects">
                 <h1>Your Projects</h1>
-                <div class="project-cards">
-                    project
-                </div>
-                <div class="project-cards">
-                    project
-                </div>
-                <div class="project-cards">
-                    project
-                </div>
-                <div class="project-cards">
-                    project
-                </div>
-                <div class="project-cards">
-                    project
-                </div>
-                <div class="project-cards">
-                    project
+                <div id="project-grid" class="grid-container">
+                    <div class="project-cards">
+                        <div class="card-title">
+                            <h3>Project Title</h2>
+                        </div>
+                        <div class="card-desc">
+                            <p>Nam quis eros pharetra sapien pretium auctor et quis neque. Proin varius congue diam non gravida. Ut laoreet vestibulum sapien, in vehicula justo elementum in. In hac habitasse platea dictumst. </p>
+                        </div>
+                        <div class="card-buttons flex-container">
+                            <img style="width:25px;" class="interact-btns" src="icons/addToFave.png" alt="favorite">
+                            <img style="width:50px;" class="interact-btns" src="icons/view.png" alt="Live View">
+                            <img style="width:38px;" class="interact-btns" src="icons/github.png" alt="Visit on Github">
+                        </div>
+                    </div>
+                    <div class="project-cards">
+                        project
+                    </div>
+                    <div class="project-cards">
+                        project
+                    </div>
+                    <div class="project-cards">
+                        project
+                    </div>
+                    <div class="project-cards">
+                        project
+                    </div>
+                    <div class="project-cards">
+                        project
+                    </div>
                 </div>
             </div>
             <div id="announcements">
-            <h1>Announcements</h1>
-            <div class="announce-shown">
-                HE
-            </div>
-            <div class="announce-shown">announcement
+                <h1 id="announce-tag">Announcements</h1>
+                <div id="announcements-grid" class="grid-container">
+                    <div class="announce-shown">
+                        <div class="announce-title">
+                            <h4>Announcement 1</h4>
+                        </div>
+                        <div class="announce-desc">
+                            <p>Ut justo justo, luctus sed orci non, porta sagittis erat. Duis vel tempor sapien. Praesent tempor lacinia velit, non mattis.</p>
+                        </div>
+                    </div>
+                    <div class="announce-shown">announcement
 
-            </div>
-            <div class="announce-shown">announcement
+                    </div>
+                    <div class="announce-shown last-shown">announcement
 
-            </div>
+                    </div>
+                </div>
+                    
             </div>
             <div id="trending">
                 <h1>Trending</h1>
-                <div class="trending-projects">trending
-
-                </div>  
-                <div class="trending-projects">trending
-                
-                </div>
-                <div class="trending-projects">trending
-
-                </div>
-                <div class="trending-projects">trending
-
+                <div id="trending-grid" class="grid-container">
+                    <div class="trending-projects">
+                        <img class="trending-proj-icon" src="icons/lion.png" alt="Lion">
+                        <div class="trending-who">
+                            <h4 class="trending-handle">@gryffindor</h4>
+                            <p>Quidditch MatchMaker</p>
+                        </div>
+                    </div>  
+                    <div class="trending-projects">trending
+                    
+                    </div>
+                    <div class="trending-projects">trending
+    
+                    </div>
+                    <div class="trending-projects">trending
+    
+                    </div>
                 </div>
             </div>
         </div>
