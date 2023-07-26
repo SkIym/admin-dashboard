@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Admin Dashboard</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
                 <div id="notif-settings"  class="flex-container">
                     <img id= "bell-icon" src="./icons/bell.png" alt="Notifications">
                     <img id="picture" src="./icons/616563.png" alt="Your picture">
-                    <span id="name-small">Skiym Myiks</span>
+                    <span id="name-small"><h3>Skiym Myiks</h3></span>
                 </div>
             </div>
             <div id="header-bottom" class="flex-container">
@@ -25,8 +26,7 @@
                     <img id="picture-big" src="./icons/616563.png" alt="Your picture">
                     <span id="greet-hi">Hi there,</span>
                     <div id="greet-details" class="flex-container">
-                        <h2 id="name-big">Skiym Myiks</h2>
-                        <h2 id="tag">(@skiym)</h2>
+                        <h2 id="name-big">Skiym Myiks (@skiym)</h2>
                     </div>
                     
                 </div>
@@ -60,7 +60,7 @@
         </div>
         <div id="content" class="grid-container">
             <div id="projects">
-                <h1>Your Projects</h1>
+                <h3 class="section-tag">Your Projects</h3>
                 <div id="project-grid" class="grid-container">
                     <div class="project-cards">
                         <div class="card-title">
@@ -93,7 +93,7 @@
                 </div>
             </div>
             <div id="announcements">
-                <h1 id="announce-tag">Announcements</h1>
+                <h3 class="section-tag">Announcements</h3>
                 <div id="announcements-grid" class="grid-container">
                     <div class="announce-shown">
                         <div class="announce-title">
@@ -113,7 +113,7 @@
                     
             </div>
             <div id="trending">
-                <h1>Trending</h1>
+                <h3 class="section-tag">Trending</h3>
                 <div id="trending-grid" class="grid-container">
                     <div class="trending-projects">
                         <img class="trending-proj-icon" src="icons/lion.png" alt="Lion">
