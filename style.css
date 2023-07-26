@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;500;600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap');
 
 * {
     margin: 0;
     outline: none;
     font-family: 'Outfit', sans-serif;
+    cursor: default;
 }
 
 
@@ -37,7 +37,7 @@
     grid-row: 1 / 3;
     justify-content: center;
     grid-template-rows: 3fr 2fr 2fr 2fr;
-    background: linear-gradient(#393D3F, 70%,#5c6266);
+    background: linear-gradient(#393D3F, 85%,#5c6266);
     color: #FDFDFF;
 }
 
@@ -55,6 +55,9 @@
 
 .section-tag {
     margin-bottom: 15px;
+    /* border-top: 2px solid transparent;
+    border-image: repeating-linear-gradient(90deg, #62929E, #546A7B) 30; */
+
 }
 
 /* header assets */
@@ -122,6 +125,7 @@
     justify-self: end;
     width: 65px;
     margin-right: 1vw;
+    align-self: flex-start;
 }
 
 #greet-hi {
@@ -134,7 +138,7 @@
 }
 
 #greet-details > h2 {
-    font-size: max(1.5rem, 1.6vw);
+    font-size: max(1.1rem, 1.6vw);
     flex-shrink: 1;
 }
 
@@ -142,12 +146,11 @@
     border-left: 1px solid #f2f7fe;
     flex: 1;
     justify-content: center;
-    align-self: end;
+    align-self: center;
 }
 
 #create-content > button {
-    margin: 10px 20px 10px 20px;  
-    padding: 10px 30px 10px 30px; 
+    padding: 10px 20px 10px 20px; 
     border: 1px solid transparent;
     text-align: center;
     background-color: transparent;
@@ -176,10 +179,15 @@
 
 #dashboard-logo {
     align-items: center;
-    maring-b
 }
+
 #dashboard-text {
     letter-spacing: 0.6rem;
+    transition: 1s;
+}
+
+#dashboard-text:hover {
+    letter-spacing: 0.4rem;
 }
 
 #higher-settings {
@@ -219,16 +227,31 @@ ul:hover {
 #announcements-grid {
     padding: 20px 30px 30px 30px;
     gap: 20px;
-    border: 1px solid black;
+    background-color: #FDFDFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 0.4rem;
+}
+.announce-desc {
+    font-weight: 300;
+    color: #73787b;
+    font-size: 15px;
+}
+
+.announce-title > h4 {
+    font-weight: 500;
 }
 
 .announce-shown {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #a0abaf;
     padding-bottom: 20px;
+    transition: 0.4s;
 }
 
+.announce-shown:hover {
+    border-bottom: 1px solid #546A7B;
+}
 .last-shown {
-    border: none;
+    border-bottom: 1px solid transparent;
 }
 
 /* projects div */
@@ -237,27 +260,60 @@ ul:hover {
     grid-template-columns: repeat(auto-fit, minmax(280px, 2fr));
     column-gap: 14px;
     row-gap: 30px;
-    border: 1px solid black;
 }
 
 .project-cards {
-    border: 1px solid black;
-    padding: 30px 10px 10px 10px;
+    padding: 30px 20px 10px 20px;
+    background-color: #FDFDFF;
+    border: 1px solid transparent;
+    border-radius: 0.4rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.project-cards:hover {
+    border: 1px solid #546A7B;
 }
 
 .card-buttons {
     align-items: center;
     justify-content: end;
     gap: 7px;
+    border-top: 1px dashed #62929e82;
     margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.card-title > h3{
+    font-weight: 500;
+}
+
+.card-desc {
+    font-weight: 300;
+    margin-top: 3px;
+    color: #73787b;
+    font-size: 15px;
+}
+
+
+.interact-btns {
+    transition: 0.3s;
+}
+
+.interact-btns:hover {
+    cursor: pointer;
+    transform: scale(1.06);
 }
 
 /* trending div */
 
 #trending-grid {
     justify-content: start;
-    padding: 30px;
-    border: 1px solid black;
+    padding: 30px 30px 20px 30px;
+    background-color: #FDFDFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 0.4rem;
 }
 
 .trending-proj-icon {
@@ -265,17 +321,21 @@ ul:hover {
     margin-right:15px;
 }
 
-.interact-btns {
-    transition: 0.2s;
+.trending-who > p {
+    font-weight: 200;
+    color: #73787b;
 }
 
-.interact-btns:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+.trending-who > h4 {
+    font-weight: 400;
 }
 
 .trending-projects {
     display: flex;
     margin-bottom: 20px;
     align-items: center;
+}
+
+.trending-handle:hover {
+    cursor: pointer;
 }
