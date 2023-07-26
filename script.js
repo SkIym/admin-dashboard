@@ -23,5 +23,4 @@ function minimizeHeader(e) {
   
 }
 
-
 mainContent.addEventListener("wheel", minimizeHeader);
