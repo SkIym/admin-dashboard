@@ -36,8 +36,28 @@
                     <button>Share</button>
                 </div>
             </div>
-
-                
+            <div id="mobile-menu" class="flex-container">
+                <ul>Home</ul>
+                <ul>Profile</ul>
+                <ul>Messages</ul>
+                <ul>Tasks</ul>
+                <ul>Communities</ul>
+                <div id="dropdown">
+                    <div>
+                        <svg id='dropdown-button' onclick="showDropDown()" viewBox="0 0 100 80" width="20" height="20">
+                            <rect width="100" height="20"></rect>
+                            <rect y="30" width="100" height="20"></rect>
+                            <rect y="60" width="100" height="20"></rect>
+                        </svg>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="#">History</a>
+                        <a href="#">Settings</a>
+                        <a href="#">Support</a>
+                        <a href="#">Privacy</a>
+                    </div>
+                </div>                   
+            </div> 
         </div>
         <div id="sidebar" class="grid-container">
             <div id="dashboard-logo" class="flex-container">
